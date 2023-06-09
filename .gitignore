@@ -34,4 +34,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+# next-env.d.ts  <<< 얘를 포함하면 다른 로컬저장소에 저장하는 경우 css모듈을 불러올 수 없음.
