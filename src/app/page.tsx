@@ -1,10 +1,11 @@
-import Header from "@/styles/header"
+import LoginMenu from "@/styles/login_menu"
+import NavBar from "@/styles/nav_bar"
 
 export default function Home() {
   return (
     <div>
-      <Header />
-        <h1>hello world!</h1>
+      <NavBar />
+        <LoginMenu />
     </div>
   )
 }
