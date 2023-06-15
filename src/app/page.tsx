@@ -1,7 +1,7 @@
-import LoginMenu from "@/styles/login_menu"
+import LoginMenu from "@/app/login_menu"
 import NavBar from "@/styles/nav_bar"
 
-export default function Home() {
+const Home =() => {
   return (
     <div>
       <NavBar />
@@ -9,3 +9,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;

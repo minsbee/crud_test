@@ -47,8 +47,8 @@ const LoginMenu = () =>  {
       <HeaderBackWrap>
         <LogoWrap />
         <LoginMenuWrap>
-          <LoginMenuBtns href={ '/' }>Sign In</LoginMenuBtns>
-          <LoginMenuBtns href={ '/' }>Sign Up</LoginMenuBtns>
+          <LoginMenuBtns href={ './login' }>Sign In</LoginMenuBtns>
+          <LoginMenuBtns href={ '../' }>Sign Up</LoginMenuBtns>
         </LoginMenuWrap>
       </HeaderBackWrap>
     )
