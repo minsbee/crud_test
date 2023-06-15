@@ -1,4 +1,6 @@
+import NavBar from '@/styles/nav_bar'
 import { Montserrat } from 'next/font/google'
+import LoginMenu from './login_menu'
 
 const fontMontserrat = Montserrat({ subsets: ['latin'] })
 
@@ -11,6 +13,8 @@ export default function RootLayout({ children,}: { children: React.ReactNode}) {
   return (
     <html lang="en">
       <body className={fontMontserrat.className}>
+          <NavBar />
+          <LoginMenu />
           { children }
         </body>
     </html>

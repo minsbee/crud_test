@@ -20,8 +20,8 @@ const NavBar:NextPage = () =>  {
     return (
         <AppBar sx={{ display: 'flex', width:'40vw', height: '80px', left: '50%', right:'inherit', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '5vw', color:'white', fontSize:'1.5rem', fontWeight:'700', bgcolor:'#222', transform: 'translateX(-50%)', borderRadius:'0 0 20px 20px' }}>
             <NavBtn href={ '/' }>Home</NavBtn>
-            <NavBtn href={ '/' }>About</NavBtn>
-            <NavBtn href={ '/' }>Movies</NavBtn>
+            <NavBtn href={ '../notes' }>Notes</NavBtn>
+            <NavBtn href={ '../movies' }>Movies</NavBtn>
             <NavBtn href={ '/' }>Q&A</NavBtn>
         </AppBar>
     )
