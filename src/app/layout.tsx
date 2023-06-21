@@ -1,8 +1,4 @@
-import NavBar from '@/styles/nav_bar'
-import { Montserrat } from 'next/font/google'
-import LoginMenu from './login_menu'
-
-const fontMontserrat = Montserrat({ subsets: ['latin'] })
+import Header from './header'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,9 +8,8 @@ export const metadata = {
 export default function RootLayout({ children,}: { children: React.ReactNode}) {
   return (
     <html lang="en">
-      <body className={fontMontserrat.className}>
-          <NavBar />
-          <LoginMenu />
+      <body style={{ backgroundColor: '#222', color: '#fff' }}>
+        <Header />
           { children }
         </body>
     </html>
