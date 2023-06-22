@@ -149,7 +149,7 @@ const config = {
   ],
   "activeProvider": "mongodb",
   "dataProxy": false,
-  "postinstall": true
+  "postinstall": false
 }
 
 const fs = require('fs')
