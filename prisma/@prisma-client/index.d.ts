@@ -214,7 +214,7 @@ export namespace Prisma {
   export type Exact<T, W> = $Public.Exact<T, W>
 
   /**
-   * Prisma Client JS version: 4.16.0
+   * Prisma Client JS version: 4.16.1
    * Query Engine version: b20ead4d3ab9e78ac112966e242ded703f4a052c
    */
   export type PrismaVersion = {
@@ -657,196 +657,202 @@ export namespace Prisma {
   }
 
   export type TypeMap<ExtArgs extends $Extensions.Args = $Extensions.DefaultArgs> = {
-      meta: {
-        modelProps: 'user' | 'notes'
-        txIsolationLevel: never
-      },
-      model: {
+    meta: {
+      modelProps: 'user' | 'notes'
+      txIsolationLevel: never
+    },
+    model: {
       User: {
-        findUnique: {
-          args: Prisma.UserFindUniqueArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        findUniqueOrThrow: {
-          args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        findFirst: {
-          args: Prisma.UserFindFirstArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        findFirstOrThrow: {
-          args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        findMany: {
-          args: Prisma.UserFindManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        create: {
-          args: Prisma.UserCreateArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        createMany: {
-          args: Prisma.UserCreateManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        delete: {
-          args: Prisma.UserDeleteArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        update: {
-          args: Prisma.UserUpdateArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        deleteMany: {
-          args: Prisma.UserDeleteManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        updateMany: {
-          args: Prisma.UserUpdateManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        upsert: {
-          args: Prisma.UserUpsertArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        aggregate: {
-          args: Prisma.UserAggregateArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        groupBy: {
-          args: Prisma.UserGroupByArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        findRaw: {
-          args: Prisma.UserFindRawArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        aggregateRaw: {
-          args: Prisma.UserAggregateRawArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
-        }
-        count: {
-          args: Prisma.UserCountArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<User>
-          payload: UserPayload<ExtArgs>
+        operations: {
+          findUnique: {
+            args: Prisma.UserFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload> | null
+            payload: UserPayload<ExtArgs>
+          }
+          findUniqueOrThrow: {
+            args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload>
+            payload: UserPayload<ExtArgs>
+          }
+          findFirst: {
+            args: Prisma.UserFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload> | null
+            payload: UserPayload<ExtArgs>
+          }
+          findFirstOrThrow: {
+            args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload>
+            payload: UserPayload<ExtArgs>
+          }
+          findMany: {
+            args: Prisma.UserFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload>[]
+            payload: UserPayload<ExtArgs>
+          }
+          create: {
+            args: Prisma.UserCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload>
+            payload: UserPayload<ExtArgs>
+          }
+          createMany: {
+            args: Prisma.UserCreateManyArgs<ExtArgs>,
+            result: Prisma.BatchPayload
+            payload: UserPayload<ExtArgs>
+          }
+          delete: {
+            args: Prisma.UserDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload>
+            payload: UserPayload<ExtArgs>
+          }
+          update: {
+            args: Prisma.UserUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload>
+            payload: UserPayload<ExtArgs>
+          }
+          deleteMany: {
+            args: Prisma.UserDeleteManyArgs<ExtArgs>,
+            result: Prisma.BatchPayload
+            payload: UserPayload<ExtArgs>
+          }
+          updateMany: {
+            args: Prisma.UserUpdateManyArgs<ExtArgs>,
+            result: Prisma.BatchPayload
+            payload: UserPayload<ExtArgs>
+          }
+          upsert: {
+            args: Prisma.UserUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<UserPayload>
+            payload: UserPayload<ExtArgs>
+          }
+          aggregate: {
+            args: Prisma.UserAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateUser>
+            payload: UserPayload<ExtArgs>
+          }
+          groupBy: {
+            args: Prisma.UserGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<UserGroupByOutputType>[]
+            payload: UserPayload<ExtArgs>
+          }
+          findRaw: {
+            args: Prisma.UserFindRawArgs<ExtArgs>,
+            result: Prisma.JsonObject
+            payload: UserPayload<ExtArgs>
+          }
+          aggregateRaw: {
+            args: Prisma.UserAggregateRawArgs<ExtArgs>,
+            result: Prisma.JsonObject
+            payload: UserPayload<ExtArgs>
+          }
+          count: {
+            args: Prisma.UserCountArgs<ExtArgs>,
+            result: $Utils.Optional<UserCountAggregateOutputType> | number
+            payload: UserPayload<ExtArgs>
+          }
         }
       }
       Notes: {
-        findUnique: {
-          args: Prisma.NotesFindUniqueArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        findUniqueOrThrow: {
-          args: Prisma.NotesFindUniqueOrThrowArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        findFirst: {
-          args: Prisma.NotesFindFirstArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        findFirstOrThrow: {
-          args: Prisma.NotesFindFirstOrThrowArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        findMany: {
-          args: Prisma.NotesFindManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        create: {
-          args: Prisma.NotesCreateArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        createMany: {
-          args: Prisma.NotesCreateManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        delete: {
-          args: Prisma.NotesDeleteArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        update: {
-          args: Prisma.NotesUpdateArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        deleteMany: {
-          args: Prisma.NotesDeleteManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        updateMany: {
-          args: Prisma.NotesUpdateManyArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        upsert: {
-          args: Prisma.NotesUpsertArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        aggregate: {
-          args: Prisma.NotesAggregateArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        groupBy: {
-          args: Prisma.NotesGroupByArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        findRaw: {
-          args: Prisma.NotesFindRawArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        aggregateRaw: {
-          args: Prisma.NotesAggregateRawArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
-        }
-        count: {
-          args: Prisma.NotesCountArgs<ExtArgs>,
-          result: $Utils.OptionalFlat<Notes>
-          payload: NotesPayload<ExtArgs>
+        operations: {
+          findUnique: {
+            args: Prisma.NotesFindUniqueArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload> | null
+            payload: NotesPayload<ExtArgs>
+          }
+          findUniqueOrThrow: {
+            args: Prisma.NotesFindUniqueOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload>
+            payload: NotesPayload<ExtArgs>
+          }
+          findFirst: {
+            args: Prisma.NotesFindFirstArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload> | null
+            payload: NotesPayload<ExtArgs>
+          }
+          findFirstOrThrow: {
+            args: Prisma.NotesFindFirstOrThrowArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload>
+            payload: NotesPayload<ExtArgs>
+          }
+          findMany: {
+            args: Prisma.NotesFindManyArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload>[]
+            payload: NotesPayload<ExtArgs>
+          }
+          create: {
+            args: Prisma.NotesCreateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload>
+            payload: NotesPayload<ExtArgs>
+          }
+          createMany: {
+            args: Prisma.NotesCreateManyArgs<ExtArgs>,
+            result: Prisma.BatchPayload
+            payload: NotesPayload<ExtArgs>
+          }
+          delete: {
+            args: Prisma.NotesDeleteArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload>
+            payload: NotesPayload<ExtArgs>
+          }
+          update: {
+            args: Prisma.NotesUpdateArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload>
+            payload: NotesPayload<ExtArgs>
+          }
+          deleteMany: {
+            args: Prisma.NotesDeleteManyArgs<ExtArgs>,
+            result: Prisma.BatchPayload
+            payload: NotesPayload<ExtArgs>
+          }
+          updateMany: {
+            args: Prisma.NotesUpdateManyArgs<ExtArgs>,
+            result: Prisma.BatchPayload
+            payload: NotesPayload<ExtArgs>
+          }
+          upsert: {
+            args: Prisma.NotesUpsertArgs<ExtArgs>,
+            result: $Utils.PayloadToResult<NotesPayload>
+            payload: NotesPayload<ExtArgs>
+          }
+          aggregate: {
+            args: Prisma.NotesAggregateArgs<ExtArgs>,
+            result: $Utils.Optional<AggregateNotes>
+            payload: NotesPayload<ExtArgs>
+          }
+          groupBy: {
+            args: Prisma.NotesGroupByArgs<ExtArgs>,
+            result: $Utils.Optional<NotesGroupByOutputType>[]
+            payload: NotesPayload<ExtArgs>
+          }
+          findRaw: {
+            args: Prisma.NotesFindRawArgs<ExtArgs>,
+            result: Prisma.JsonObject
+            payload: NotesPayload<ExtArgs>
+          }
+          aggregateRaw: {
+            args: Prisma.NotesAggregateRawArgs<ExtArgs>,
+            result: Prisma.JsonObject
+            payload: NotesPayload<ExtArgs>
+          }
+          count: {
+            args: Prisma.NotesCountArgs<ExtArgs>,
+            result: $Utils.Optional<NotesCountAggregateOutputType> | number
+            payload: NotesPayload<ExtArgs>
+          }
         }
       }
     }
   } & {
     other: {
-      $runCommandRaw: {
-        args: Prisma.InputJsonObject,
-        result: Prisma.JsonObject
-        payload: any
+      operations: {
+        $runCommandRaw: {
+          args: Prisma.InputJsonObject,
+          result: Prisma.JsonObject
+          payload: any
+        }
       }
     }
   }
-    export const defineExtension: $Extensions.ExtendsHook<'define', Prisma.TypeMapCb, $Extensions.DefaultArgs>
+  export const defineExtension: $Extensions.ExtendsHook<'define', Prisma.TypeMapCb, $Extensions.DefaultArgs>
   export type DefaultPrismaClient = PrismaClient
   export type RejectOnNotFound = boolean | ((error: Error) => Error)
   export type RejectPerModel = { [P in ModelName]?: RejectOnNotFound }

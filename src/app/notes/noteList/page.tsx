@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../../../prisma/@prisma-client";
+import {PrismaClient} from '@prisma/client'
 
 const prisma = new PrismaClient();
 
@@ -7,7 +7,7 @@ export default async function NoteList() {
     return (
         <>
             <h4>상세페이지</h4>
-            {result.map((e) => (
+            {result.map((e:any) => (
                 <div key={e.id}>
                     <p>{e.title}</p>
                     <p>{e.content}</p>
