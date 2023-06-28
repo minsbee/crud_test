@@ -8,7 +8,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
 
     if (req.method === 'GET') {
         try {
-            const getNote = await prisma.note.findUnique({
+            const getNote = await prisma.notes.findUnique({
                 where : {
                     id: noteId
                 }
@@ -23,7 +23,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
         }
     }else if (req.method === 'PUT') {
             try {
-                const updateNote = await prisma.note.update({
+                const updateNote = await prisma.notes.update({
                     where: {
                         id: noteId
                     },
@@ -33,7 +33,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
                     },
                 });
                 res.json(updateNote);
-                const updatedNote = await prisma.note.findUnique({
+                const updatedNote = await prisma.notes.findUnique({
                     where: {
                         id: noteId
                     }
@@ -47,7 +47,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
             }
     } else if (req.method === 'DELETE') {
         try {
-            const deleteNote = await prisma.note.delete({
+            const deleteNote = await prisma.notes.delete({
                 where: {
                     id: noteId
                 }

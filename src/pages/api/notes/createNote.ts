@@ -8,7 +8,7 @@ export default async function handle(req: NextApiRequest, res: NextApiResponse) 
     
     if (req.method === 'POST') {
         try {
-            const createNote = await prisma.note.create({
+            const createNote = await prisma.notes.create({
                 data: {
                     title,
                     content

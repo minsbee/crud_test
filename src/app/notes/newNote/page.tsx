@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import Router from 'next/router'
-import Layout from '@/app/layout'
 
 const Draft: React.FC = () => {
     const [title, setTitle] = useState('')
@@ -12,19 +11,19 @@ const Draft: React.FC = () => {
         e.preventDefault()
         try {
             const body = { title, content }
-            await fetch(`http://localhost:3000/api/notes/createNote`, {
+            await fetch(`/api/notes/createNote`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(body),
             })
-            await Router.push('/drafts')
+            // await Router.push('/')
         } catch (error) {
             console.error(error)
         }
     }
 
     return (
-        <Layout>
+        <>
             <div>
                 <form
                     onSubmit={submitData}>
@@ -81,8 +80,8 @@ const Draft: React.FC = () => {
         .back {
           margin-left: 1rem;
         }
-      `}</style>
-        </Layout>
+            `}</style>
+        </>
     )
 }
 
