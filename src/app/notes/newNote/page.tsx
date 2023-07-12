@@ -11,12 +11,13 @@ const Draft: React.FC = () => {
         e.preventDefault()
         try {
             const body = { title, content }
-            await fetch(`/api/notes/createNote`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(body),
-            })
-            // await Router.push('/')
+            const res = await fetch(`/api/notes/createNote`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(body),
+                    })
+            const data = await res.json();
+            return data;
         } catch (error) {
             console.error(error)
         }
@@ -54,31 +55,31 @@ const Draft: React.FC = () => {
             </div>
             <style jsx>{`
         .page {
-          background: white;
-          padding: 3rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+            background: white;
+            padding: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         input[type='text'],
         textarea {
-          width: 100%;
-          padding: 0.5rem;
-          margin: 0.5rem 0;
-          border-radius: 0.25rem;
-          border: 0.125rem solid rgba(0, 0, 0, 0.2);
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 0.25rem;
+            border: 0.125rem solid rgba(0, 0, 0, 0.2);
         }
 
         input[type='submit'] {
-          background: #ececec;
-          border: 0;
-          padding: 1rem 2rem;
-          cursor: pointer;
+            background: #ececec;
+            border: 0;
+            padding: 1rem 2rem;
+            cursor: pointer;
         }
 
         .back {
-          margin-left: 1rem;
+            margin-left: 1rem;
         }
             `}</style>
         </>
