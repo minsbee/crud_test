@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import Router from 'next/router'
+import Router from 'next/navigation'
 
 const Draft: React.FC = () => {
     const [title, setTitle] = useState('')
@@ -10,7 +10,7 @@ const Draft: React.FC = () => {
     const submitData = async (e: React.SyntheticEvent) => {
         e.preventDefault()
         try {
-            const body = { title, content }
+            const body = { title, content };
             const res = await fetch(`/api/notes/createNote`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -19,7 +19,7 @@ const Draft: React.FC = () => {
             const data = await res.json();
             return data;
         } catch (error) {
-            console.error(error)
+            console.log("API 요청 에러..")
         }
     }
 
